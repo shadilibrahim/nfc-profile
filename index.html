@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* =========================
-           BASIC PAGE STYLES
-           ========================= */
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
@@ -22,6 +19,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background-image: url('bg.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .page-heading {
@@ -32,9 +33,6 @@
             color: #333;
         }
 
-        /* =========================
-           MAIN CONTAINER
-           ========================= */
         .container {
             width: 90%;
             max-width: 800px;
@@ -49,9 +47,6 @@
             position: relative;
         }
 
-        /* =========================
-           WHITE OVERLAY
-           ========================= */
         .container::before {
             content: "";
             position: absolute;
@@ -65,9 +60,6 @@
             z-index: 1;
         }
 
-        /* =========================
-           RIGHT CONTENT SECTION
-           ========================= */
         .right {
             flex: 1;
             padding: 40px 20px;
@@ -75,9 +67,6 @@
             flex-direction: column;
         }
 
-        /* =========================
-           TEXT STYLES
-           ========================= */
         .Name {
             font-size: 2.5em;
             font-weight: bold;
@@ -98,9 +87,6 @@
             color: #000;
         }
 
-        /* =========================
-           STORY BOX
-           ========================= */
         .story-box {
             background-color: #ffffff;
             border: 1px solid #e0e0e0;
@@ -119,13 +105,9 @@
             font-size: 0.9em;
         }
 
-        /* =========================
-           BUTTON STYLES
-           ========================= */
         .button-container {
             display: flex;
             flex-direction: column;
-            
         }
 
         .button {
@@ -149,7 +131,12 @@
         .call {
             background-color: #ffffff;
             color: #000000;
-            border: 1px solid #ffd700;
+            border: 2px solid #004789;
+        }
+
+        .save {
+            background-color: #ffd700;
+            color: #000000;
         }
 
         .icon {
@@ -157,16 +144,13 @@
             margin-right: 10px;
         }
 
-        /* =========================
-           BUTTON HOVER EFFECTS
-           ========================= */
         .button:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .whatsapp:hover {
-            background-color: #e6c200;
+            background-color: #fff;
         }
 
         .call:hover {
@@ -174,9 +158,10 @@
             color: #fff;
         }
 
-        /* =========================
-           FLOATING WHATSAPP BUTTON
-           ========================= */
+        .save:hover {
+            background-color: #fff;
+        }
+
         .floating-whatsapp {
             position: fixed;
             top: 20px;
@@ -200,9 +185,6 @@
             transform: scale(1.1);
         }
 
-        /* =========================
-           MOBILE RESPONSIVE
-           ========================= */
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
@@ -222,23 +204,18 @@
         }
 
         .page-heading {
-    width: 100%;       /* Takes full width of container */
-    max-width: 400px;  /* But doesn’t grow bigger than 400px */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto 20px auto; /* Center horizontally */
-}
-
-        
-        
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
     </style>
 </head>
 
 <body>
 
-   <img src="nd.png"class="page-heading" />
-
-
+    <img src="nd.png" class="page-heading" />
 
     <div class="container">
 
@@ -250,7 +227,6 @@
             <p class="subtitle">Driving Instructor</p>
             <p class="bold-text">Sharjah Motor Driving School</p>
 
-            <!-- Buttons under name -->
             <div class="button-container">
                 <a href="https://wa.me/971507858328" class="button whatsapp">
                     <span class="icon">💬</span> WhatsApp
@@ -259,29 +235,28 @@
                 <a href="tel:0507858328" class="button call">
                     <span class="icon">📞</span> Call
                 </a>
+
+                <a href="ibrahim-cp.vcf" class="button save" download>
+                    <span class="icon">💾</span> Save Contact
+                </a>
             </div>
 
-            <!-- Story Box below buttons -->
             <div class="story-box">
                 <h2 class="dive-deeper">Master the Art of Driving</h2>
                 <h2 class="bold-text">Drive Manual!</h2>
 
-                    <p class="story-desc">
-                    15+ Years Experienced driving instructor helping students gain confidence,
+                <p class="story-desc">
+                    20+ Years Experienced driving instructor helping students gain confidence,
                     safety, and skill on UAE roads.
                 </p>
 
                 <p class="story-desc" style="text-align: center;">
-    English | العربية | മലയാളം | हिंदी | தமிழ்
-</p>
-
+                    English | العربية | മലയാളം | हिंदी | தமிழ்
+                </p>
             </div>
-            
 
         </div>
     </div>
 
-    <!-- CREDITS -->
-    <!-- <p class="credits">Designed by Shadil Ibrahim | © 2025 All Rights Reserved</p> -->
 </body>
 </html>
